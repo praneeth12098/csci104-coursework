@@ -1,0 +1,21 @@
+Breaking this problem down into 3 parts, we see that it consists of an if 
+statement, an else if statement, and an else statement. Furthermore, we see
+that if statement always runs at O(1). Now, looking at the else if statement,
+we see that we can simplify this expression by looking at when its conditions
+are met. By examining the ranges between perfect squares (i.e. 25-36, 36-49, etc)
+we see that this condition is only met 3 times for each n value in the range 
+between the perfect squares. Looking at the nested for loops inside this else if 
+statement, we see that it can be broken down into to summations. One that goes
+from i = 0 to n and one that goes from j = 0 to i. And the work done inside the 
+nested for loop is of order O(1). Simplfying this double summation we see that 
+it becomes of the order O((n^2 + n)/2). Now, looking at the last else statement, 
+we see that since the else statement is met n - 3 times for the range of n values 
+inside the range between perfect squares as mentioned above, since the else if is only 
+met 3 times per n. Therefore, we can say that the runtime for the program is 
+approximately O(1) + 3*((n^2 + n)/2) + (sqrt(n)-1)*3 (we get this from adding up 
+the range of values from n = 0 to whatever n is). We ammortize the cost, by dividing by 
+n to get the average cost per n value. Looking at the big-theta function we see that
+in the best case, the else if is never  met and the function runs at O(1). Looking at 
+the worst case, we see that the else if is met all 3 times for that range of n. Now, 
+looking at the ammortized cost, we see that big theta is approximately O(n) (division 
+of the worst case and best case by n).

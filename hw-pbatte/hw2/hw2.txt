@@ -1,0 +1,30 @@
+Problem 1:
+	a) README.md is an emtpy file that needs to be filled in with a description of your repository.
+
+	b) README.md is updated with the text provided but not on github since it hasn't been added, committed, and pushed yet. fun_problem.txt is a new empty file in SampleRepo but is not added, committed, and pushed either. Both the files will display as not tracked by SampleRepo if git status is called.
+
+	c) It means both the files are staged and ready to be committed. Git status would pull up a message with something along the lines of "Changes to be committed: new file: README.md, fun_problem.txt."
+
+	d) The files are now committed and ready to be pushed to the repo. Calling git commit with that message will show up in the repo when looking at the files to see which change you want to examine. The state of the file with the message is the one that you are saving by committing it with that message. The first echo line is appending the following message to README.md and the second echo line is appending the following message to fun_problem.txt, but the changes are untracked. 
+
+	e) README.md is staged and ready to be committed to SampleRepo. fun_problem.txt is now unstaged from being committed. The changes done to fun_problem.txt will be discarded and it should be the same as it was.
+
+	f) README.md is appended by that message and the changes are untracked since it is not added. 
+
+Problem 3:
+	a) For each element in n it program loops n^2 times as shown by the condition k < i*n. This means the program runs at Theta(n^3).
+
+	b) Assuming A is the worst case would mean all elements in A are the same (i.e. A = [1, 1, 1, 1, 1]). This would result in a run time of (n^2-3n+2)+(n-1)*log(base2)(n-1). We get this by first looking at the firs two loops. Assuming A is of size n+1, and the iterator i starts at 1 and goes until i < n, this would mean that loop runs n-2 times. The second loop with iterator k would run n-1 times since it goes until k <= n. Now, since A is the worst case, the condition would be met n-1 times since A is of size n+1 and k starts at 1. Further, the last loop with iterator m would run log(base2)(n-1) since m also starts at 1 and is increment by 2m each time. As a result, we get O((n^2-3n+2)+(n-1)*log(base2)(n-1)). In the best case, the if statement would never be met and the program would be Omega(n^2-3n+2). As a result, we get Theta(n^2). 
+
+	c) This program would run at Theta(2^n) since as n increases the number of function calls and operations grow exponentionally. When n = 2,3 the function has approximately 2 function calls; n = 4,5 -> 6 function calls; n = 6,7 -> 14 function calls; n = 8,9 -> 30 function calls. the function This program does not have a best or worst case as the only thing that happens takes O(1) time. 
+
+	d) This program is Theta(n) since in the worst case it will run through n times and perform all the O(1) operations inside the if statement (and the resize operation is also O(1)) and in the best case it will run through n times and never form the operations inside the if statement. 
+
+Problem 4:
+	1) Using a map of maps would be one solution. The keys for the 'outer' map would be the album names which would then map to another map which would have a key of track numbers. These track numbers would have values with the song names. 
+
+	2) A list would probably be the simplest way of doing this since each index can be a new step. 
+
+	3) A set of sets would be one solution. The 'outer' set would contain all the file extensions. Then each file extension would be a set that contains all the files that are able to open that file extension. 
+
+	4) A set that stores all the the tv stations as keys would work. 

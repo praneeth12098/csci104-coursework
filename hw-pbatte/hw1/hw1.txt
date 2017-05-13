@@ -1,0 +1,25 @@
+Problem 1
+	Part a: 
+		1) Acceptable
+		2) Unacceptable
+		3) Unacceptable
+		4) Acceptable
+		5) Unacceptable
+		6) Unacceptable
+		7) Unacceptable
+		8) Unacceptable
+	Part b:
+		Emacs, Eclipse, Sublime, MS Visual Studio
+	Part c:
+		Each student has 4 late days of which only 1 can be used per HW.
+	Part d:
+		Complete the homework submission form.
+
+Problem 2
+	Part a:
+		Git Bash (Windows), Terminal (Mac or Linux)
+	Part b:
+		1) git add <file>
+		2) git log -3
+	Part c:
+		It will bring up a "COMMIT_EDITMSG" that will prompt you to enter the commit message and it will abort the commit if you leave it blank.
